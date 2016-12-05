@@ -18,3 +18,4 @@ Do not remove these specs - they are required for all goals.
  1. Frist 5 Intermediate Algorithms
  2. Next 5 Intermediate Algorithms
  3. Finish Intermediate Algorithms
+test
