@@ -1,12 +1,21 @@
+function chunkArrayInGroups(arr, size) {
+var papaArray = [];
+  for (i=0; i<arr.length; i += size) {
+    papaArray.push(arr.slice(i,i+size));
+  }
+  return papaArray;
+}
 
+
+
+
+//ALTERNATIVE METHOD:
 // function chunkArrayInGroups(arr, size) {
 // var papaArray = [];
 
 //   while (arr.length >0){
-
 //   var  babyArray = [];
 //     for (i=0; i<size; i++){
-
 //       if (arr == 0) {
 //         break;
 //       }
@@ -15,21 +24,8 @@
 //     }
 //     papaArray.push(babyArray);
 //   }
-
-
 //   return papaArray;
 // }
-
-
-
-
-function chunkArrayInGroups(arr, size) {
-var papaArray = [];
-  for (i=0; i<arr.length; i += size) {
-    papaArray.push(arr.slice(i,i+size));
-  }
-  return papaArray;
-}
 
 
 

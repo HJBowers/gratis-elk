@@ -1,13 +1,25 @@
 function getIndexToIns(arr, num) {
-  arr = arr.sort(sortNumber);
-  var place = 0;
-
-  function sortNumber(a,b) {
+  arr.push(num);
+  arr.sort(function(a, b){
     return a - b;
-  }
-
-  while(num>arr[place]){
-    place++;
-  }
-  return place;
+  });
+  return arr.indexOf(num);
 }
+
+
+
+//ALTERNATIVE METHOD:
+// function getIndexToIns(arr, num) {
+//   arr = arr.sort(compareNumbers);
+//   var index = 0;
+//     function compareNumbers(a, b) {
+//       return a - b;
+//     }
+//     while (num>arr[index]){
+//       index++;
+//     }
+//   return index;
+// }
+
+
+getIndexToIns([5, 3, 20, 3], 5);

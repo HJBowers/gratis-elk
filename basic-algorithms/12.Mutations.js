@@ -12,15 +12,4 @@ var strTwo = arr[1].toLowerCase();
 }
 
 
-//^SAME (below is pulled from online)
-
-// function mutation(arr) {
-//   return arr[1].toLowerCase().split('').every(function(letter) {
-//       return arr[0].toLowerCase().indexOf(letter) !== -1; // indexOf returns the index value of "letter".
-//     });
-// }
-
-
-
-
 mutation(["hello", "Hey"]);
