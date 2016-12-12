@@ -1,0 +1,64 @@
+
+function convertToRoman(num) {
+
+
+  var ones = num %10;
+  num -= ones;
+  var tens = num%100;
+  num -= tens;
+  var hunds = num%1000;
+  num -= hunds;
+  var thous = num%10000;
+  arr = [thous,hunds,tens,ones];
+
+  arr = arr.filter(function(val){
+    return val;
+  });
+
+  str = arr.join('');
+
+  str = str.replace(1000,'M');
+  str = str.replace(2000,'MM');
+  str = str.replace(3000,'MMM');
+  str = str.replace(4000,'MMMM');
+  str = str.replace(5000,'MMMMM');
+  str = str.replace(6000,'MMMMMM');
+  str = str.replace(7000,'MMMMMMM');
+  str = str.replace(8000,'MMMMMMMM');
+  str = str.replace(9000,'MMMMMMMMM');
+
+  str = str.replace(100,'C');
+  str = str.replace(200,'CC');
+  str = str.replace(300,'CCC');
+  str = str.replace(400,'CD');
+  str = str.replace(500,'D');
+  str = str.replace(600,'DC');
+  str = str.replace(700,'DCC');
+  str = str.replace(800,'DCCC');
+  str = str.replace(900,'CM');
+
+  str = str.replace(10,'X');
+  str = str.replace(20,'XX');
+  str = str.replace(30,'XXX');
+  str = str.replace(40,'XL');
+  str = str.replace(50,'L');
+  str = str.replace(60,'LX');
+  str = str.replace(70,'LXX');
+  str = str.replace(80,'LXXX');
+  str = str.replace(90,'XC');
+
+  str = str.replace(1,'I');
+  str = str.replace(2,'II');
+  str = str.replace(3,'III');
+  str = str.replace(4,'IV');
+  str = str.replace(5,'V');
+  str = str.replace(6,'VI');
+  str = str.replace(7,'VII');
+  str = str.replace(8,'VIII');
+  str = str.replace(9,'IX');
+  str = str.replace(0,'');
+
+  return str;
+
+
+}
